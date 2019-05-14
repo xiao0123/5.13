@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 50px;
+				border-radius: 50%;
+				
+			}
+			.darkred{
+				background-color: darkred;
+				width: 300px;
+				height: 300px;
+			}
+			.red{background-color:red;}
+			.orange{background-color: orange;}
+			.yellow{background-color: yellow;}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			
+			<div class="darkred" v-on:click="clicka">
+				<div class="red" v-on:click="clicka">
+					<div class="orange" v-on:click="clicka">
+						<div class="yellow" v-on:click..prevent.self="clicka"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+					clicka:function(e){
+						console.log(e.currentTarget)
+					}
+				}
+			})
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

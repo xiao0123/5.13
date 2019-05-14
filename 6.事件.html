@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:200px;
+				height: 200px;
+				border: 1px solid red;
+			}
+			.red{
+				background-color: red;
+			}
+			.darkred{
+				background-color: darkred;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="box" v-bind:class="boxColor" v-on:click="change"></div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:"#app",
+				data:{
+					boxColor:"red"
+				},
+				methods:{
+					change:function(e){
+						console.log(e);
+						console.log(e.target)
+//						this.boxColor="darkred"
+						if (this.boxColor=="red") {
+							this.boxColor="darkred"
+						} else{
+							this.boxColor="red"
+						}
+					}
+				}
+			})
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

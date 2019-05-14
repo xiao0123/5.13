@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="value in object">{{value}}</li>
+			</ul>
+			<ul>
+				<li v-for="(value,key) in object">{{key}}:{{value}}</li>
+			</ul>
+			<ul>
+				<li v-for="(value,key,index) in object">{{index}}-{{key}}-{{value}}</li>
+			</ul>
+			<ul>
+				<li v-for="(item,a) in arr" >{{a}}--{{item}}</li>
+				<li v-for="item in 10">{{item}}</li>
+			</ul>
+			
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:"#app",
+				data:{
+					object:{
+						title:"西游记",
+						author:"吴承恩",
+						publishedAt:"2019-5-13"
+					},
+					arr:["111","222","333"]
+				}
+			})
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
